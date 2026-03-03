@@ -5,6 +5,7 @@
 *.so
 *.dylib
 wpscan-api
+server
 
 # Test
 *.test

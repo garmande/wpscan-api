@@ -1,0 +1,17 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./results:/app/results:ro
+
+  wpscan:
+    image: wpscanteam/wpscan:latest
+    volumes:
+      - ./config/wpscan.yml:/wpscan/.wpscan/scan.yml:ro
+      - ./results:/results
+    env_file:
+      - .env
+    profiles:
+      - scan

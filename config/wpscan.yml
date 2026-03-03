@@ -1,0 +1,13 @@
+cli_options:
+  url: https://garmande.com
+  format: json
+  no_update: true
+  output: /results/latest.json
+  random_user_agent: true
+  detection_mode: mixed
+  enumerate: vp,vt,cb,dbe
+  plugins_detection: passive
+  force: false
+  max_threads: 5
+  request_timeout: 60
+  connect_timeout: 30
